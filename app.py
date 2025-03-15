@@ -32,12 +32,12 @@ def fetch_details(dataframe, target_time):
     df_filter = df_filter[df_filter['Count of Survey Attempts'] >= 4]
     
     # Resetting Index
-    df = df.reset_index()
+    df = df_filter.reset_index()
     
     new_order = ['NPI', 'State', 'Login Time', 'Logout Time', 'Usage Time (mins)', 'Region', 'Speciality', 'Count of Survey Attempts']
     df = df[new_order]
 
-    return df_filter
+    return df
     
     
 
